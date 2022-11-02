@@ -8,6 +8,11 @@ body {
   src: url('./fonts/Showtime-R9Ke.ttf');
 }
 
+@font-face {
+  font-family: nav;
+  src: url('./fonts/Market_Deco.ttf');
+}
+
 .title {
   padding-left: 20px;
   padding-top: 20px;
@@ -17,4 +22,8 @@ body {
 
 .header {
   background-color: black;
+}
+
+.nav-link {
+  font-family: nav;
 }
