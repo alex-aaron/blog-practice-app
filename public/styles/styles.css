@@ -8,8 +8,13 @@ body {
   src: url('./fonts/Showtime-R9Ke.ttf');
 }
 
-.header {
-  text-align: center;
+.title {
+  padding-left: 20px;
   padding-top: 20px;
+  padding-bottom: 20px;
   font-family: title;
+}
+
+.header {
+  background-color: black;
 }
