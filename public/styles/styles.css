@@ -20,6 +20,16 @@ body {
   src: url('./fonts/Roboto-Thin.ttf');
 }
 
+@font-face {
+  font-family: general;
+  src: url('./fonts/MADE TOMMY Regular_PERSONAL USE.otf');
+}
+
+@font-face {
+  font-family: content-header;
+  src: url('./fonts/KGALittleSwag.ttf');
+}
+
 .title {
   padding-left: 20px;
   padding-top: 20px;
@@ -41,4 +51,12 @@ body {
 
 .nav-link {
   font-family: nav;
+}
+
+.content-header {
+  font-family: content-header;
+}
+
+.content-general {
+  font-family: general;
 }
