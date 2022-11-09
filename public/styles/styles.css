@@ -1,7 +1,7 @@
 body {
   padding-top: 115px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
   background-image: url("./images/blog practice app bg.png");
 }
 
@@ -22,7 +22,7 @@ body {
 
 @font-face {
   font-family: general;
-  src: url('./fonts/MADE TOMMY Regular_PERSONAL USE.otf');
+  src: url('./fonts/Roboto-Regular.ttf');
 }
 
 @font-face {
@@ -59,4 +59,8 @@ body {
 
 .content-general {
   font-family: general;
+}
+
+#new-blog-form {
+  padding: 20px;
 }

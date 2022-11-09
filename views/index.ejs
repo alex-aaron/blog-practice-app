@@ -9,33 +9,31 @@
   </head>
   <body>
     <%- include('./partials/header') -%>
-    <h1 class='content-header'>Blogs</h1>
-
-    <div id='blog-container'>
-      <div class="blog">
-        <h3 class="content-general">
-          <a href="#blog1" data-bs-toggle='collapse'>Blog 1</a>
-        </h3>
-        <div class="collapse" id="blog1">
-          <div class="card card-body">
-            Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-          </div>
-        </div>
+    <div class='row'>
+      <div class='col'>
+        <h1 class='content-header'>Blogs</h1>
+      </div>
+      <div class='col'>
+        <button type='button' class='btn btn-dark btn-lg float-right'>
+          <a href='/new'>Add Blog</button></a>
       </div>
     </div>
-    <!-- <p>
-       <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-         Link with href
-       </a>
-       <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-         Button with data-bs-target
-       </button>
-     </p>
-     <div class="collapse" id="collapseExample">
-       <div class="card card-body">
-         Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-       </div>
-     </div> -->
+    <div class="blog-container">
+      <% for (let i = 0; i < posts.length; i++) { %>
+        <div class='blog'>
+          <h3 class='general' id=`${posts[i].title}`><%= posts[i].title %></h3>
+          <hr />
+          <p class='blog-content'>
+          <% let path = "posts/" + i; %>
+          <%  if (posts[i].content.length > 100){ %>
+              <%= posts[i].content + "..."  %> <a href=<%= path %>>Read more</a>
+          <%  } else { %>
+              <%= posts[i].content %>
+          <%  } %>
+          </p>
+        </div>
+      <% } %>
+    </div>
     <%- include('./partials/footer') -%>
   </body>
 </html>
